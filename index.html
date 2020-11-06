@@ -1,144 +1,171 @@
+
 <!DOCTYPE html>
 <html lang="ja">
 
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=1200">
   <title>jQuery 登龍門</title>
   <script src="jquery-3.4.1.min.js"></script>
   <script>
-    $(function () {
+    $(function() {
       // プログラムを内蔵するときはここへ記述する
 
 
 
       $('#yellow').animate({
-        top: 180
-      }, 22000, 'linear')
+          top: 180      
+        }, 22000, 'linear')
         .animate({
           opacity: 0
         });
 
       $('#black').animate({
-        top: 240
-      }, 18000, 'linear')
+          top: 240
+        }, 18000, 'linear')
         .animate({
           opacity: 0
         });
       $('#white').animate({
-        top: 230
-      }, 20000, 'linear')
+          top: 230
+        }, 20000, 'linear')
         .animate({
           opacity: 0
         });
       $('#red').animate({
-        top: 200
-      }, 22000, 'linear')
+          top: 200
+        }, 22000, 'linear')
         .animate({
           opacity: 0
         });
       $('#pink ').animate({
-        top: 260
-      }, 19000, 'linear')
+          top: 260
+        }, 19000, 'linear')
         .animate({
           opacity: 0
         });
       $('#mix').animate({
-        top: 200
-      }, 18000, 'linear')
+          top: 200
+        }, 18000, 'linear')
         .animate({
           opacity: 0
         });
       $('#shyu').animate({
-        top: 280
-      }, 18000, 'linear')
+          top: 280
+        }, 18000, 'linear')
         .animate({
           opacity: 0
         });
       $('#home').animate({
-        left: 0
-      }, 10000, 'linear').animate({
-        left: 900
+          left: -100
+        }, 10000, 'linear').animate({
+          left: 1100
 
-      }, 8000, 'linear')
+        }, 8000, 'linear')
         .animate({
-          left: 750,
-          top: 320
+          left: 540,
+          top: 250
         }, 8000, 'linear');
 
       $('#light').animate({
-        opacity: 0,
-      } , )
+       opacity: 0.2,
+      })
 
     });
 
   </script>
 
   <style>
-    img {
-      max-width: 100%;
-    }
-
     body {
-      width: 1500px;
-      margin: 0 auto;
-      height: 840px;
-    }
-
-    #container {
-      width: 100%;
-      height: 100%;
       background-image: url(images/naiagara.jpg);
+      background-position: right 10 % bottom 10px;
       background-repeat: no-repeat;
-      background-size: cover;
-      position: relative;
+      background-size: 100% auto;
     }
-
-    .character-container {
-      width: 1500px;
-      height: 85%;
-      margin-top: 15%;
-      position: absolute;
-      bottom: 0;
-      left: 50%;
-      transform: translateX(-50%);
-      display: flex;
-    }
-
-    .character {
+   .character {
       position: relative;
       margin: 0 0 1em;
       width: 220px;
     }
 
-    .character img {
+    img {
       position: relative;
       width: 50px;
+        
     }
 
     #outer {
-      /* width: 90%; */
-      width: 1080px;
-      /* margin: -5% auto 0; */
-      margin: -100px auto 0;
+      width: 1000px;
+      position: absolute;
+      top: -100px;
+      left: 200px;
     }
+    
 
     #home {
-      width: 300px;
-      /* padding: 0 60px; */
+      width: 1000px;
       position: absolute;
-      top: 180px;
-      left: 50%;
-      transform: translateX(-50%);
-      text-align: center;
+      top: 28px;
+      left: 530px;
     }
 
-    #light {
+    #yellow {
       position: absolute;
-      /* top: 15%; */
-      top: 140px;
-      left: 50%;
-      transform: translateX(-50%);
+      top: 800px;
+      left: 400px;
+    }
+
+    #black {
+      position: absolute;
+      top: 700px;
+      left: 800px;
+    }
+
+    #red {
+      position: absolute;
+      top: 700px;
+      left: 600px;
+    }
+
+    #pink {
+      position: absolute;
+      top: 600px;
+      left: 900px;
+    }
+
+    #white {
+      position: absolute;
+      top: 700px;
+      left: 500px;
+    }
+
+    #mix {
+      position: absolute;
+      top: 580px;
+      left: 700px;
+    }
+
+    #shyu {
+      position: absolute;
+      top: 750px;
+      left: 1000px;
+    }
+    
+    #home img {
+      
+      width: 300px;
+      
+    }
+    
+    #outer img {
+
+      width: 1000px;
+
+    }
+    
+    #light img {
+      width: 300px;
+      top: 40px;
+      left: 530px;
       animation: flash 2s linear 11;
     }
 
@@ -151,10 +178,20 @@
         opacity: 0;
       }
     }
+  
+    
+    #bear img {
+      position: absolute;
+      top: 540px;
+      right: 60px;
+      width: 120px;
+      height: 166px;
+    }
 
+    
     #hanabi {
       width: 100%;
-      height: 100%;
+      height: 50vw;
       position: absolute;
       top: 0;
       left: 0;
@@ -180,126 +217,61 @@
       }
     }
 
-    #yellow {
-      position: absolute;
-      bottom: 30px;
-      left: 450px;
-    }
-
-    #black {
-      position: absolute;
-      bottom: 80px;
-      left: 800px;
-    }
-
-    #red {
-      position: absolute;
-      bottom: 80px;
-      left: 630px;
-    }
-
-    #pink {
-      position: absolute;
-      bottom: 150px;
-      left: 900px;
-    }
-
-    #white {
-      position: absolute;
-      bottom: 80px;
-      left: 550px;
-    }
-
-    #mix {
-      position: absolute;
-      bottom: 200px;
-      left: 730px;
-    }
-
-    #shyu {
-      position: absolute;
-      bottom: 60px;
-      left: 1000px;
-    }
-
-    #bear {
-      position: absolute;
-      bottom: 20px;
-      right: 60px;
-    }
-
-    #home img {
-      width: 300px;
-    }
-
-    #light img {
-      width: 300px;
-      top: 40px;
-      left: 530px;
-    }
-
-    #bear img {
-      width: 120px;
-      height: 166px;
-    }
   </style>
 </head>
 
 <body>
 
   <div id="container">
-
+    <div class="character" id="yellow">
+      <div class="title"></div>
+      <img src="images/黄.png">
+    </div>
+    <div class="character" id="black">
+      <div class="title"></div>
+      <img src="images/黒.png">
+    </div>
+    <div class="character" id="red">
+      <div class="title"></div>
+      <img src="images/赤.png">
+    </div>
+    <div class="character" id="pink">
+      <div class="title"></div>
+      <img src="images/桃.png">
+    </div>
+    <div class="character" id="white">
+      <div class="title"></div>
+      <img src="images/白.png">
+    </div>
+    <div class="character" id="mix">
+      <div class="title"></div>
+      <img src="images/赤白.png">
+    </div>
+    <div class="character" id="shyu">
+      <div class="title"></div>
+      <img src="images/朱.png">
+    </div>
     <div id="outer">
-      <img src="images/レインボー.png">
-    </div>
-    <div id="light">
-      <img src="images/稲妻.png">
-    </div>
-
-    <div class="character" id="home">
-      <div class="title"></div>
-      <img src="images/Dragon.png">
-    </div>
-
-    <div class="character-container">
-      <div class="character" id="yellow">
-        <div class="title"></div>
-        <img src="images/黄.png">
-      </div>
-      <div class="character" id="black">
-        <div class="title"></div>
-        <img src="images/黒.png">
-      </div>
-      <div class="character" id="red">
-        <div class="title"></div>
-        <img src="images/赤.png">
-      </div>
-      <div class="character" id="pink">
-        <div class="title"></div>
-        <img src="images/桃.png">
-      </div>
-      <div class="character" id="white">
-        <div class="title"></div>
-        <img src="images/白.png">
-      </div>
-      <div class="character" id="mix">
-        <div class="title"></div>
-        <img src="images/赤白.png">
-      </div>
-      <div class="character" id="shyu">
-        <div class="title"></div>
-        <img src="images/朱.png">
-      </div>
-    </div>
-
-    <div id="bear">
-      <div class="title"></div>
-      <img src="images/bear.png">
-    </div>
-
-    <div id="hanabi"></div>
-
+      <img src="images/レインボー.png"></div>
   </div>
+  <div id="light">
+    <img src="images/稲妻.png"></div>
+
+  <div class="character" id="home">
+    <div class="title"></div>
+    <img src="images/Dragon.png">
+  </div>
+
+  <div id="bear">
+    <div class="title"></div>
+    <img src="images/bear.png">
+  </div>
+
+  <div id="hanabi"></div>
+
+
+
+
 
 </body>
 
