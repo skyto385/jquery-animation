@@ -65,6 +65,10 @@
           left: 540,
           top: 250
         }, 8000, 'linear');
+      
+       $('#light').animate({
+       opacity: 0,
+      })
 
     });
 
@@ -162,19 +166,12 @@
       width: 300px;
       top: 40px;
       left: 530px;
+    }
+    
+    #light {
       animation: flash 2s linear 11;
     }
-
-    @keyframes flash {
-      0%, 100% {
-        opacity: 0.2;
-      }
-
-      50% {
-        opacity: 0;
-      }
-    }
-  
+    
     
     #bear img {
       position: absolute;
