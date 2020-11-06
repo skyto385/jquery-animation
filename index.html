@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=1200">
+  <title>jQuery 登龍門</title>
+  <script src="jquery-3.4.1.min.js"></script>
+  <script>
+    $(function () {
+      // プログラムを内蔵するときはここへ記述する
+
+
+
+      $('#yellow').animate({
+        top: 180
+      }, 22000, 'linear')
+        .animate({
+          opacity: 0
+        });
+
+      $('#black').animate({
+        top: 240
+      }, 18000, 'linear')
+        .animate({
+          opacity: 0
+        });
+      $('#white').animate({
+        top: 230
+      }, 20000, 'linear')
+        .animate({
+          opacity: 0
+        });
+      $('#red').animate({
+        top: 200
+      }, 22000, 'linear')
+        .animate({
+          opacity: 0
+        });
+      $('#pink ').animate({
+        top: 260
+      }, 19000, 'linear')
+        .animate({
+          opacity: 0
+        });
+      $('#mix').animate({
+        top: 200
+      }, 18000, 'linear')
+        .animate({
+          opacity: 0
+        });
+      $('#shyu').animate({
+        top: 280
+      }, 18000, 'linear')
+        .animate({
+          opacity: 0
+        });
+      $('#home').animate({
+        left: -100
+      }, 10000, 'linear').animate({
+        left: 1100
+
+      }, 8000, 'linear')
+        .animate({
+          left: 600,
+          top: 320
+        }, 8000, 'linear');
+
+      // $('#light').animate({
+      //   opacity: 0.2,
+      // })
+
+    });
+
+  </script>
+
+  <style>
+    img {
+      max-width: 100%;
+    }
+
+    body {
+      width: 1200px;
+      height: 840px;
+    }
+
+    #container {
+      width: 100%;
+      height: 100%;
+      background-image: url(images/naiagara.jpg);
+      background-repeat: no-repeat;
+      background-size: 1320px 924px;
+      position: relative;
+    }
+
+    .character-container {
+      width: 100%;
+      height: 85%;
+      margin-top: 15%;
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      display: flex;
+    }
+
+    .character {
+      position: relative;
+      margin: 0 0 1em;
+      width: 220px;
+    }
+
+    .character img {
+      position: relative;
+      width: 50px;
+    }
+
+    #outer {
+      /* width: 90%; */
+      width: 1080px;
+      /* margin: -5% auto 0; */
+      margin: -100px auto 0;
+    }
+
+    #home {
+      width: 300px;
+      /* padding: 0 60px; */
+      position: absolute;
+      top: 180px;
+      left: 50%;
+      transform: translateX(-50%);
+      text-align: center;
+    }
+
+    #light {
+      position: absolute;
+      /* top: 15%; */
+      top: 140px;
+      left: 600px;
+      transform: translateX(-50%);
+      animation: flash 1s linear infinite;
+    }
+
+    @keyframes flash {
+      0%,
+      100% {
+        opacity: 0.2;
+      }
+
+      50% {
+        opacity: 0;
+      }
+    }
+
+    #hanabi {
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: 1;
+      opacity: 0;
+      background: url(./images/hanabi.png) no-repeat center center / contain;
+      animation: hanabi 5s linear 22s infinite;
+    }
+
+    @keyframes hanabi {
+      0%,
+      100% {
+        opacity: 0;
+      }
+
+      50% {
+        opacity: 0.7;
+      }
+    }
+
+    #yellow {
+      position: absolute;
+      bottom: 30px;
+      left: 300px;
+    }
+
+    #black {
+      position: absolute;
+      bottom: 80px;
+      left: 650px;
+    }
+
+    #red {
+      position: absolute;
+      bottom: 80px;
+      left: 480px;
+    }
+
+    #pink {
+      position: absolute;
+      bottom: 150px;
+      left: 750px;
+    }
+
+    #white {
+      position: absolute;
+      bottom: 80px;
+      left: 400px;
+    }
+
+    #mix {
+      position: absolute;
+      bottom: 200px;
+      left: 580px;
+    }
+
+    #shyu {
+      position: absolute;
+      bottom: 60px;
+      left: 850px;
+    }
+
+    #bear {
+      position: absolute;
+      bottom: 0;
+      right: 60px;
+    }
+
+    #home img {
+      width: 300px;
+    }
+
+    #light img {
+      width: 300px;
+      top: 40px;
+      left: 530px;
+    }
+
+    #bear img {
+      width: 120px;
+      height: 166px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div id="container">
+
+    <div id="outer">
+      <img src="images/レインボー.png">
+    </div>
+    <div id="light">
+      <img src="images/稲妻.png">
+    </div>
+
+    <div class="character" id="home">
+      <div class="title"></div>
+      <img src="images/Dragon.png">
+    </div>
+
+    <div class="character-container">
+      <div class="character" id="yellow">
+        <div class="title"></div>
+        <img src="images/黄.png">
+      </div>
+      <div class="character" id="black">
+        <div class="title"></div>
+        <img src="images/黒.png">
+      </div>
+      <div class="character" id="red">
+        <div class="title"></div>
+        <img src="images/赤.png">
+      </div>
+      <div class="character" id="pink">
+        <div class="title"></div>
+        <img src="images/桃.png">
+      </div>
+      <div class="character" id="white">
+        <div class="title"></div>
+        <img src="images/白.png">
+      </div>
+      <div class="character" id="mix">
+        <div class="title"></div>
+        <img src="images/赤白.png">
+      </div>
+      <div class="character" id="shyu">
+        <div class="title"></div>
+        <img src="images/朱.png">
+      </div>
+    </div>
+
+    <div id="bear">
+      <div class="title"></div>
+      <img src="images/bear.png">
+    </div>
+
+    <div id="hanabi"></div>
+
+  </div>
+
+</body>
+
+</html>
